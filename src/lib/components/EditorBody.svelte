@@ -1,5 +1,10 @@
+<script>
+  export let markdown;
+  // console.log(markdown);
+</script>
+
 <div class="container">
-  <textarea name="" id=""></textarea>
+  <textarea name="" id="" bind:value={markdown}></textarea>
 </div>
 
 
