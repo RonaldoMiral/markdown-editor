@@ -7,7 +7,9 @@ const isParagraph = (token) => token.match(paragraph_regex);
 const ordered_list_regex = /^\d[.] /;
 const isOrderedList = (token) => token.match(ordered_list_regex);
 
-const unordered_list_regex = /^- /;
+// const unordered_list_regex = /^- /;
+const secondLevel = /(^\s- | {4}- )/;
+const unordered_list_regex = new RegExp(`^- |${secondLevel.source}`);
 const isUnOrderedList = (token) => token.match(unordered_list_regex);
 
 const block_quote_regex = /^> /;
@@ -18,7 +20,8 @@ const isCodeBlock = (token) => token.match(code_block_regex);
 
 export { 
   heading_regex, paragraph_regex, ordered_list_regex,
-  unordered_list_regex, block_quote_regex, code_block_regex,
+  unordered_list_regex, block_quote_regex,
+  code_block_regex, secondLevel,
   isHeading, isParagraph, isOrderedList,
   isUnOrderedList, isBlockQuote, isCodeBlock
 };
