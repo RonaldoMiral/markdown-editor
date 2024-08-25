@@ -1,13 +1,20 @@
 <script>
+	import { block_quote_regex } from './../utils/regex.js';
 	export let token;
-	export let block;
 
-	const isCodeBlock = token.includes('```');
-	const quote = isCodeBlock ? token.replace(block, '').slice(1) : token.replace(block, '');
+	$: str = '';
+	$: isCodeBlock = token.includes('```');
+
+	$: {
+		if (isCodeBlock) {
+			let code = token.replace(/```/g, '');
+			str = code.match(/^\n/) ? code.replace(/^\n/, '') : code;
+		} else str = token.replace(block_quote_regex, '');
+	}
 </script>
 
 <div class="container" class:isCodeBlock>
-	<p>{quote}</p>
+	<p>{str}</p>
 </div>
 
 <style>
