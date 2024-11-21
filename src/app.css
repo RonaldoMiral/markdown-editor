@@ -1,0 +1,64 @@
+:root {
+  font-size: 62.5%;
+
+  /* COLORS */
+  --blc-1000: hsl(225, 9%, 9%);
+  --blc-900: hsl(216, 8%, 12%);
+  --blc-800: hsl(220, 7%, 18%);
+  --blc-700: hsl(216, 9%, 23%);
+  --blc-600: hsl(216, 8%, 38%);
+  --blc-500: hsl(213, 4%, 51%);
+  --blc-400: hsl(222, 9%, 78%);
+  --blc-300: hsl(0, 0%, 89%);
+  --blc-200: hsl(0, 0%, 96%);
+  --blc-100: hsl(0, 0%, 100%);
+  --orange: hsl(13, 75%, 58%);
+  --orange-hover: hsl(21, 86%, 67%);
+
+  /* FONTS */
+
+  /* Editor typography */
+  --ed-ft-reg-medium: 15px;
+  --ed-ft-reg-small: 14px;
+  --ed-ft-lig-small: 13px;
+
+  /* Spacing */
+  --ed-ft-reg-sm-spacing: 2px;
+
+  /* PREVIEW HEADINGS SIZES */
+  --pr-ft-sz-h1: 32px;
+  --pr-ft-sz-h2: 28px;
+  --pr-ft-sz-h3: 24px;
+  --pr-ft-sz-h4: 20px;
+  --pr-ft-sz-h5: 16px;
+  --pr-ft-sz-h6: 14px;
+
+  /* OTHER PREVIEWS ELEMENTS */
+  --pr-ft-sz: 14px;
+  --pr-ln-sp: 24px;
+
+  /* FONT WEIGHTS */
+  --ft-wt-700: 700;
+  --ft-wt-400: 400;
+
+  /* FONT FAMILIES */
+  --fm-roboto-lig: 'Roboto Light', 'Courier New', Courier, monospace;
+  --fm-roboto-reg: "Roboto Mono", 'Courier New', Courier, monospace;
+
+
+  background-color: var(--blc-1000);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  display: block;
+}
